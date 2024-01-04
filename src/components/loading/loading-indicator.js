@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom';
 import Loading from './loading';
 
 let isLoading = false;
@@ -10,7 +10,9 @@ export function ShowLoading() {
     const container = document.createElement('div');
     container.setAttribute('id', 'loading-container');
     document.body.appendChild(container);
-    ReactDOM.render(loadingElement, container);
+    
+    const root = createRoot(container);
+    root.render(loadingElement);
   }
 }
 
@@ -18,7 +20,8 @@ export function HideLoading() {
   if (isLoading) {
     isLoading = false;
     const container = document.getElementById('loading-container');
-    ReactDOM.unmountComponentAtNode(container);
+    const root = createRoot(container);
+    root.unmount();
     container.remove();
   }
 }
