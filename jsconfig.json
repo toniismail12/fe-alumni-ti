@@ -1,7 +1,18 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@api": ["src/api"],
+      "@styles": ["styles"],
+      "@api-routes": ["src/api-routes"],
+      "@data": ["src/data"],
+      "@layouts": ["src/layouts"],
+      "@utils": ["src/utils"],
+      "@contexts": ["src/contexts"],
+      "@controllers": ["src/controllers"],
+      "@components": ["src/components"],
+      "@variable": ["src/variable"],
     }
   }
 }
